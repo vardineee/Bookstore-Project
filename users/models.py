@@ -21,3 +21,4 @@ class CustomUser(AbstractUser):
     date_of_birth = models.DateField(blank=True, null=True)
     phone_number = models.CharField(blank=True, null=True, max_length=100)
     gender = models.CharField(max_length=30, choices=CHOICES, blank=True, null=True)
+    username = models.CharField(blank=True, null= True, max_length=100)
