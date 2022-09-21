@@ -23,7 +23,6 @@ class CustomUserApiView(APIView):
 
     def patch(self, request, pk):
         user = models.CustomUser.objects.get(id=pk)
-        print(user)
         serializer = serializers.CustomUserSerializers(user, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
