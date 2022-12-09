@@ -109,10 +109,3 @@ class CartItemView(APIView):
         item = self.get_object(pk)
         item.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-    # def post(self,request):
-    #     try:
-    #         cart_item = models.Cart.objects.get(user=request.user)
-    #         serializer = serializers.CartSerializers(data=request.data, partial=True)
-    #         if serializer.is
-    #    except:
